@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}{% endblock title %}
+    </title>
+    <meta name="description" content="{% block meta_description %}{% endblock %}">
+
+    {% block stylesheets '' %}
+    {% block final_stylesheets '' %}
+    {% block head_javascript '' %}
+
+</head>
+<body class="">
+    {% block body '' %}
+    {% block javascript '' %}
+    {% block final_javascript '' %}
+</body>
+</html>
