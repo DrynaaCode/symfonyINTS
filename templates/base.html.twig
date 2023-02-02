@@ -9,12 +9,22 @@
     </title>
     <meta name="description" content="{% block meta_description %}{% endblock %}">
 
+    <link href="/assets/themes/bootstrap.css" rel="stylesheet"/>
+	<link href="assets/themes/_bootswatch.scss" rel="stylesheet"/>
+	<link href="assets/themes/_variables.scss" rel="stylesheet"/>
+	<link href="assets/themes/bootstrap.min.css" rel="stylesheet"/>
+
+
     {% block stylesheets '' %}
     {% block final_stylesheets '' %}
     {% block head_javascript '' %}
 
 </head>
-<body class="">
+
+	{% block header %}
+		{% include "partials/_header.html.twig" %}
+	{% endblock %}
+<body>
     {% block body '' %}
     {% block javascript '' %}
     {% block final_javascript '' %}

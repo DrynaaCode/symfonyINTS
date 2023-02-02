@@ -1,0 +1,3 @@
+Fixture : Jeu de fausses données qui va permettre de faire des tests 
+ 
+FakerPHP : permet de créer des fixtures
