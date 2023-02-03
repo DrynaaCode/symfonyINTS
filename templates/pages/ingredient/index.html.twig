@@ -5,6 +5,25 @@
 
 {% block body %}
 	<div class="container mt-4">
+		<div class="modal">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Modal title</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true"></span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<p>Modal body text goes here.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary">Save changes</button>
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
 		{% for message in app.flashes('success') %}
 			<div class="alert alert-dismissible alert-success">
 				<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
@@ -27,6 +46,8 @@
 						<th scope="col">Nom</th>
 						<th scope="col">Prix</th>
 						<th scope="col">Date de création</th>
+						<th>Edition</th>
+						<th>Suppression</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -37,6 +58,12 @@
 							<td>{{ingredient.price}}
 								€</td>
 							<td>{{ingredient.createdAt|date("d/m/Y")}}</td>
+							<td>
+								<a href="{{path('ingredient.edit',{id: ingredient.id})}}" class="btn btn-warning">Editer</a>
+							</td>
+							<td>
+								<a href="{{path('ingredient.delete',{id: ingredient.id})}}" class="btn btn-danger">Supprimer</a>
+							</td>
 						</tr>
 					{% endfor %}
 				</tbody>
