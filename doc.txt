@@ -1,3 +1,27 @@
 Fixture : Jeu de fausses données qui va permettre de faire des tests 
  
 FakerPHP : permet de créer des fixtures
+
+
+Recette : 
+- nom
+-temps en minutes
+- nombre de personnes
+- liste d'étapes
+- difficulté 
+- prix
+- Possibilité de definir comme favoris ou non
+-date de création 
+- Date de mise à jour 
+- Liste d'ingrédients
+
+Etapes : 
+
+- Création de l'entité 
+- Vérification avec les Assert
+- Mise en place des fixtures
+- Mise en place de la page "Liste des recettes
+- Ajouter recette
+- Modifier / voir recette
+- Supprimer recette
+- Push git 

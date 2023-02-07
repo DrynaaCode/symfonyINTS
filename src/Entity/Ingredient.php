@@ -6,6 +6,8 @@ use App\Repository\IngredientRepository;
 use DateTime;
 use DateTimeImmutable;
 use Doctrine\ORM\Mapping as ORM;
+
+//Contraintes
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -78,5 +80,9 @@ class Ingredient
         $this->createdAt = $createdAt;
 
         return $this;
+    }
+    public function __toString()
+    {
+        return $this->name;
     }
 }
