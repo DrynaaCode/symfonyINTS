@@ -1,0 +1,27 @@
+{# templates/login/index.html.twig #}
+{% extends 'base.html.twig' %}
+
+{# ... #}
+
+{% block body %}
+<div class="container ">
+    <h1>Connexion</h1>
+        {% if error %}
+            <div class="alert alert-dismissible alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+        {% endif %}
+        <form  method="post" action="{{path('security.login')}}">
+            <div class="form-group">
+                <label for="username" class="form-label mt-4">Adresse email</label>
+                <input type="email" class="form-control" id="username" aria-describedby="emailHelp" placeholder="exemple@gmail.com" name="_username"  value="{{ last_username }}">
+            </div>
+            <div class="form-group">
+                <label for="password" class="form-label mt-4">Mot de passe</label>
+                <input type="password" class="form-control" id="password" placeholder="Mot de passe" name="_password">
+            </div>
+    
+            {# If you want to control the URL the user is redirected to on success
+            <input type="hidden" name="_target_path" value="/account"> #}
+            <button  type="submit" class="btn btn-primary mt-4">Connexion</button>
+        </form>
+    </div>
+{% endblock %}
